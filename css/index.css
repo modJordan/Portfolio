@@ -11,7 +11,6 @@ h1 {
 
 h2 {
   text-align: start;
-  box-sizing: border-box;
 }
 
 body {
@@ -26,17 +25,41 @@ body {
   background-color: lightblue;
   background-position-x: center;
   width: 90vw;
-  height: 10%;
+  height: 400px;
   box-sizing: content-box;
   align-content: center;
   border: 2px solid slategray;
-  border-radius: 5%;
-
+  border-radius: 2%;
+  Margin: auto;
 }
 
-.box p {
+.box div {
   text-align: justify;
   float: right;
+  height: 100%;
+  width: 100%;
+}
+
+p {
+  float: right;
+  margin: auto;
+}
+
+.box2 {
+  opacity: 0.5;
+  background-color: white;
+  width: 100vw;
+  height: 100%;
+  margin-left: 20vw;
+  text-align: right;
+  float: right;
+  margin: 0;
+}
+
+p .about {
+  font-style: italic;
+  font-size: large;
+  font-weight: 500;
 }
 
 img {
@@ -44,6 +67,7 @@ img {
   align-items: center;
   border-radius: 50%;
   width: 30vw;
+  float: left;
 
 
 }
