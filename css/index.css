@@ -1,5 +1,40 @@
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
-  color: darkgreen;
+/* h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 90vw;
+  height: 10vh;
+  padding: 5px;
+  margin: 0em;
+  color: black;
+  border-color: 20px;
+  background-color: cornflowerblue;
+  float: inline-start;
+  text-align: center;
+} */
+
+.box {
+  background-color: lightblue;
+  width: 50vw;
+  box-sizing: content-box;
+  float: none;
+  border: 2px solid slategray;
+  border-radius: 5%;
+
+}
+
+.box img {
+  border: 3px solid blue;
+  border-radius: 50%;
+  width: 80%;
+
+}
+
+@media screen and (max-width: 480px) {
+  .box {
+    float: none;
+    background-color: aquamarine;
+  }
+
+  .box img {
+    width: 80%;
+  }
 }
