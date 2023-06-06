@@ -26,6 +26,7 @@
 /* Line item positioning  */
 li {
   margin-left: 5%;
+  font-family: 'Libre Baskerville', serif;
 }
 
 /* For top name section of page */
@@ -43,7 +44,7 @@ li {
 }
 
 /* Profile image */
-img {
+#img {
   border-radius: 50%;
   border-color: grey;
   opacity: 100;
@@ -59,22 +60,22 @@ img {
 /* Name on page */
 h1 {
   text-align: center;
-  font-style: italic;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 600;
+  font-family: 'Shrikhand', cursive;
 }
 
 /* About me header */
 h2 {
   text-align: left;
-  font-style: italic;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  inherits: false;
-  font-weight: 600;
+  font-family: 'Shrikhand', cursive;
 }
 
 /* Exp, hobbies and interests header */
 h3 {
+  font-family: 'Shrikhand', cursive;
   text-align: left;
   font-weight: 600;
+}
+
+p {
+  font-family: 'Libre Baskerville', serif;
 }
