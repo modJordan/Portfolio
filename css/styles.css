@@ -17,10 +17,30 @@
   padding-bottom: 30px;
   padding-left: 100px;
   margin: 20px;
-  margin-left: 5em;
+  margin-left: 3rem;
+  margin-right: 3rem;
   text-align: left;
-  align-content: center;
-  position: static;
+  position: relative;
+  z-index: 2;
+
+}
+
+
+
+/* Styling for icon */
+#icon {
+  color: black;
+  text-align: center;
+  background-color: lightpink;
+  border-radius: 10%;
+  font-family: 'Abril Fatface', cursive;
+  float: left;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+  vertical-align: top;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /* Line item positioning  */
@@ -31,9 +51,6 @@ li {
 
 /* For top name section of page */
 .namecard {
-  background-color: whitesmoke;
-  opacity: .5;
-  border-color: grey;
   border: 2px;
   border-radius: 2px;
   width: 100%;
@@ -41,32 +58,51 @@ li {
   align-content: center;
   text-align: center;
   font-size: xx-large;
+  position: relative;
+}
+
+.namecard::before {
+  content: "";
+  background-color: whitesmoke;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.6;
+
 }
 
 /* Profile image */
 #img {
   border-radius: 50%;
-  border-color: grey;
+  border-color: whitesmoke;
+  border-width: 20px;
   opacity: 100;
   height: 25em;
   width: 25em;
-  margin-right: 5%;
-  margin-left: 5%;
+  margin-right: 35%;
+  margin-left: 35%;
   margin-bottom: 20px;
+  margin-top: 3rem;
   box-sizing: content-box;
   contain: layout;
+  z-index: 1;
+
 }
 
 /* Name on page */
 h1 {
   text-align: center;
   font-family: 'Shrikhand', cursive;
+  position: relative;
 }
 
 /* About me header */
 h2 {
   text-align: left;
   font-family: 'Shrikhand', cursive;
+  position: relative;
 }
 
 /* Exp, hobbies and interests header */
@@ -74,6 +110,7 @@ h3 {
   font-family: 'Shrikhand', cursive;
   text-align: left;
   font-weight: 600;
+  position: relative;
 }
 
 p {
