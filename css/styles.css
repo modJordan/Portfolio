@@ -1,46 +1,81 @@
 * {
   padding: 0;
+  top: auto;
+}
+
+/* Profile image */
+#img {
+  border-radius: 50%;
+  border-color: whitesmoke;
+  border-width: 20px;
+  opacity: 100;
+  height: 50%;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  display: grid;
+  position: relative;
+  contain: layout;
+  z-index: 1;
 }
 
 /* #container tag is used for all text boxes  */
 
 .container {
   background-color: whitesmoke;
-  opacity: .6;
-  border-color: grey;
+  opacity: .8;
   width: 90%;
   min-height: auto;
   height: 100%;
-  border: 80%;
-  border-bottom-width: 100px;
   padding-top: 50px;
   padding-bottom: 30px;
   padding-left: 100px;
   margin: 20px;
   margin-left: 3rem;
   margin-right: 3rem;
+  margin-bottom: 5rem;
   text-align: left;
   position: relative;
-  z-index: 2;
+  z-index: 0;
+  font-family: 'Libre Baskerville', serif;
+  border-style: double;
+  border-color: lavender;
 
 }
 
+.content {
+  font-family: 'Libre Baskerville', serif;
+  padding-left: 8%;
+  padding-right: 8%;
 
+}
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: whitesmoke;
+  padding-top: 5px;
+  padding-bottom: 60px;
+  border-bottom: 3px groove darkcyan;
+  width: 100%;
+}
 
 /* Styling for icon */
 #icon {
+  font-family: 'Shrikhand', cursive;
   color: black;
   text-align: center;
   background-color: lightpink;
   border-radius: 10%;
-  font-family: 'Abril Fatface', cursive;
   float: left;
+  width: auto;
+  height: auto;
   padding: 10px;
-  margin: 5px;
-  display: inline-block;
+  margin: .5rem;
   vertical-align: top;
-  justify-content: space-evenly;
-  align-items: center;
+  display: inline;
 }
 
 /* Line item positioning  */
@@ -53,12 +88,14 @@ li {
 .namecard {
   border: 2px;
   border-radius: 2px;
+  opacity: .85;
   width: 100%;
-  height: fit-content;
-  align-content: center;
+  height: auto;
   text-align: center;
-  font-size: xx-large;
   position: relative;
+  z-index: 2;
+  font-family: 'Shrikhand', cursive;
+
 }
 
 .namecard::before {
@@ -69,27 +106,11 @@ li {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.6;
-
+  height: fit-content;
+  z-index: 2;
+  font-family: 'Shrikhand', cursive;
 }
 
-/* Profile image */
-#img {
-  border-radius: 50%;
-  border-color: whitesmoke;
-  border-width: 20px;
-  opacity: 100;
-  height: 25em;
-  width: 25em;
-  margin-right: 35%;
-  margin-left: 35%;
-  margin-bottom: 20px;
-  margin-top: 3rem;
-  box-sizing: content-box;
-  contain: layout;
-  z-index: 1;
-
-}
 
 /* Name on page */
 h1 {
@@ -113,6 +134,27 @@ h3 {
   position: relative;
 }
 
+h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+.divider {
+  border-bottom: darkcyan;
+  border-width: 5px;
+  border-style: double;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 5%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+a {
+  padding-top: 10rem;
+}
+
 p {
-  font-family: 'Libre Baskerville', serif;
+  margin: auto;
+  padding-left: 100px;
 }
