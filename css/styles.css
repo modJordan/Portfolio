@@ -9,12 +9,13 @@
 .container {
   background-color: lavenderblush;
   opacity: .8;
-  min-height: auto;
+  min-height: fit-content;
   padding-top: 50px;
   padding-bottom: 30px;
-  padding-left: 100px;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  margin-left: 20%;
+  margin-right: 20%;
   text-align: left;
   z-index: 0;
   font-family: 'Libre Baskerville', serif;
@@ -31,38 +32,54 @@
 
 }
 
-/* sticky element for top nav bar */
-div.sticky {
+.header {
+  grid-area: hd;
+  vertical-align: top;
+  float: inline-start;
+}
+
+.footer {
+  grid-area: ft;
+
+}
+
+.sidebar {
+  grid-area: sd;
+  border-inline-end-width: 30%;
+}
+
+.wrapper {
   position: sticky;
   top: 0;
   background-color: lavenderblush;
-  width: 75%;
-  height: 20em;
+  width: 70%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin: auto;
   z-index: 1;
-  margin-left: 10rem;
-  margin-right: 10em;
-  padding-right: 10%;
-  padding-bottom: 10%;
-
+  display: grid;
+  grid-template-columns: 9, 1fr;
+  grid-auto-rows: 3 2fr;
+  grid-template-areas:
+    "sd sd . hd hd hd hd hd hd"
+    "sd sd . . . . . . ."
+    "ft ft ft ft ft ft ft ft ft";
 }
 
 /* Styling for icon */
-#icon {
+.icon {
   font-family: 'Shrikhand', cursive;
   color: black;
-  text-align: left;
   background-color: lightpink;
   border-radius: 11%;
-  float: right;
-  width: auto;
-  height: auto;
-  padding: 10px;
-  margin-right: 5rem;
+  width: fit-content;
+  height: fit-content;
+  padding: 12px;
   margin: .5rem;
-  vertical-align: top;
-  display: flexbox;
   z-index: 1;
+  display: flow-root;
 }
+
 
 /* Line item positioning  */
 li {
@@ -70,51 +87,26 @@ li {
   font-family: 'Libre Baskerville', serif;
 }
 
-/* For top name section of page */
-.namecard {
-  border: 2px;
-  border-radius: 2px;
-  padding-left: 5%;
-  height: 10rem;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  font-family: 'Shrikhand', cursive;
-
-}
-
-/* used to make font in namecard non-opaque */
-.namecard::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  height: fit-content;
-  z-index: 2;
-  font-family: 'Shrikhand', cursive;
-}
-
 /* Profile image */
 #img {
   border-radius: 50%;
-  height: 20%;
-  width: 20%;
-  position: relative;
-  margin-right: 50%;
-  margin-left: 1rem;
+  height: auto;
+  width: 30%;
+  min-width: 20VH;
+  margin-left: 10%;
+  margin-top: 10px;
   z-index: 1;
 }
 
 
 /* Name on page */
 h1 {
-  text-align: right;
+  text-align: left;
   font-family: 'Shrikhand', cursive;
   position: relative;
-  margin-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 3rem;
+  font-size-adjust: var(.wrapper);
+  float: left;
 }
 
 /* About me/Experience/Projects/Hobbies styling header */
