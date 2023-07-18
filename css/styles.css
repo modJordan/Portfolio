@@ -9,13 +9,14 @@
 .container {
   background-color: lavenderblush;
   opacity: .8;
+  width: 70%;
   min-height: fit-content;
   padding-top: 50px;
   padding-bottom: 30px;
   margin-top: 5rem;
   margin-bottom: 5rem;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: left;
   z-index: 0;
   font-family: 'Libre Baskerville', serif;
@@ -33,19 +34,23 @@
 }
 
 .header {
-  grid-area: hd;
-  vertical-align: top;
-  float: inline-start;
+  float: inherit;
+  align-items: ;
 }
 
 .footer {
-  grid-area: ft;
+  grid-area: auto;
+  float: right;
 
 }
 
 .sidebar {
+  text-align: justify;
   grid-area: sd;
-  border-inline-end-width: 30%;
+  width: auto;
+  height: fit-content;
+  vertical-align: top;
+  margin-right: 10px;
 }
 
 .wrapper {
@@ -58,26 +63,26 @@
   margin: auto;
   z-index: 1;
   display: grid;
-  grid-template-columns: 9, 1fr;
-  grid-auto-rows: 3 2fr;
-  grid-template-areas:
-    "sd sd . hd hd hd hd hd hd"
-    "sd sd . . . . . . ."
-    "ft ft ft ft ft ft ft ft ft";
+  flex-wrap: wrap-reverse;
 }
 
 /* Styling for icon */
 .icon {
   font-family: 'Shrikhand', cursive;
+  font-size: 15px;
   color: black;
   background-color: lightpink;
   border-radius: 11%;
   width: fit-content;
-  height: fit-content;
-  padding: 12px;
-  margin: .5rem;
+  height: 15px;
+  padding: 10px;
+  margin-right: .5rem;
+  margin-left: .5rem;
+  margin-bottom: 10px;
   z-index: 1;
   display: flow-root;
+  float: inline-end;
+
 }
 
 
@@ -91,22 +96,27 @@ li {
 #img {
   border-radius: 50%;
   height: auto;
-  width: 30%;
+  width: 20%;
   min-width: 20VH;
-  margin-left: 10%;
+  margin-left: 5%;
   margin-top: 10px;
+  margin-bottom: 30px;
   z-index: 1;
+  float: left;
 }
 
 
 /* Name on page */
 h1 {
-  text-align: left;
+  text-align: right;
+  display: flex;
   font-family: 'Shrikhand', cursive;
+  font-size: 52px;
   position: relative;
   padding-left: 3rem;
-  font-size-adjust: var(.wrapper);
-  float: left;
+  float: inherit;
+  margin-right: 3rem;
+  z-index: 1;
 }
 
 /* About me/Experience/Projects/Hobbies styling header */
